@@ -1,7 +1,7 @@
 #!/bin/bash
 # This creates symlinks to the group folder
 # for a jupyter hub group. The group must have been
-# created using `mkhubgrp` and populated using adduser
+# created using `mkhubgrp` and populated using gpasswd
 # before this script is run. Takes as sole argument the group
 # name (the part after `hub_`, if you are looking at the linux
 # groups).
