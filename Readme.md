@@ -31,6 +31,9 @@ There are two subfolders within the shared folder:
      However, all members of the group can read and copy these documents.
      Documents should not be saved directly in the `published`
      folder because any member of the group can delete them, but not edit.
+     
+Hope this is useful to some. I encourage someone to integrate this into
+the jupyterhub administrative web interface.
 
  Jonathan Gutow <gutow@uwosh.edu>
  June 2020
