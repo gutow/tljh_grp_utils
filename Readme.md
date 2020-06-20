@@ -18,10 +18,7 @@ at `/opt/hubshare/<grpname>`. The location was chosen so that you will not
 forget about the directories if you are removing tljh.
 1. Populate the group with the appropriate hub users:
 `sudo gpasswd -M jupyter-userA,jupyter-userB,jupyter-userC,... hub_<grpname>`.
-1. Make a symlink in each of the users' home directories to the shared
-location. `sudo ./lnhubgrp <groupname>`. This will check the list of members
-to the group `hub_<grpname>` and create the link in each of their
-directories.
+__Make sure there are no spaces after the commas separating the usernames.__
 
 There are two subfolders within the shared folder:
 1. `shared` any documents copied to this folder can be modified by all

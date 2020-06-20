@@ -23,5 +23,5 @@ MBRS=($MBRSTR) # array of members
 for i in ${MBRS[@]}; do
   lncmd="ln -s "$LNKPATH" /home/"$i"/"$1;
   $lncmd;
-  echo "Added link to /home/"$i"."
+  echo "Added link in /home/"$i"."
 done
