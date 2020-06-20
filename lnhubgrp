@@ -1,0 +1,27 @@
+#!/bin/bash
+# This creates symlinks to the group folder
+# for a jupyter hub group. The group must have been
+# created using `mkhubgrp` and populated using adduser
+# before this script is run. Takes as sole argument the group
+# name (the part after `hub_`, if you are looking at the linux
+# groups).
+#
+# Jonathan Gutow <gutow@uwosh.edu>
+# June 2020
+# license: GPLV3+
+
+GRP="hub_"$1
+if [[ -z $1 ]]; then
+  echo "lnhubgrp takes one argument a name for the group with no spaces."
+  exit 1
+fi
+
+LNKPATH=/opt/hubshare/$1
+echo "Creating links to: "$LNKPATH
+MBRSTR=$(members "$GRP")
+MBRS=($MBRSTR) # array of members
+for i in ${MBRS[@]}; do
+  lncmd="ln -s "$LNKPATH" /home/"$i"/"$1;
+  $lncmd;
+  echo "Added link to /home/"$i"."
+done
