@@ -21,13 +21,14 @@ forget about the directories if you are removing tljh.
 __Make sure there are no spaces after the commas separating the usernames.__
 
 There are two subfolders within the shared folder:
-1. `shared` any documents copied to this folder can be modified by all
-     members of the group.
+1. `shared` any documents created initially in this folder can be modified by
+    all members of the group. Things copied to this folder will maintain their
+    original permissions, which typically only allow reading by the group.
 1. `published` documents created in subfolders of this folder can not be
-     modified or deleted by other members of the group, only the owner.
-     However, all members of the group can read and copy these documents.
-     Documents should not be saved directly in the `published`
-     folder because any member of the group can delete them, but not edit.
+    modified or deleted by other members of the group, only the owner.
+    However, all members of the group can read and copy these documents.
+    Documents should not be saved directly in the `published`
+    folder because any member of the group can delete them, but not edit.
      
 Hope this is useful to some. I encourage someone to integrate this into
 the jupyterhub administrative web interface.
