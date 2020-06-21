@@ -19,7 +19,7 @@ forget about the directories if you are removing tljh.
 1. Populate the group with the appropriate hub users:
 `sudo gpasswd -M jupyter-userA,jupyter-userB,jupyter-userC,... hub_<grpname>`.
 __Make sure there are no spaces after the commas separating the usernames.__
-1. Create a links in each group member's home directory to the shared
+1. Create a link in each group member's home directory to the shared
 directory: `sudo ./lnhubgrp <grpname>`. The link does not reliably appear
 until the user restarts their server.
 
@@ -36,6 +36,6 @@ There are two subfolders within the shared folder:
 Hope this is useful to some. I encourage someone to integrate this into
 the jupyterhub administrative web interface.
 
- Jonathan Gutow <gutow@uwosh.edu>
- June 2020
- license: GPLV3+
+Jonathan Gutow <gutow@uwosh.edu> | 
+June 2020 | 
+license: GPLV3+
